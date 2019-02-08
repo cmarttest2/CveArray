@@ -1,0 +1,1 @@
+Color Picker - Tip: View hex color codes, rgb values, css examples at https://www.webfx.com/web-design/color-picker/ Tip:
