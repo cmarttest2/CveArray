@@ -3,6 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 # https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops
+# ignoreLASTEXITCODE: true -->we use Write-Error instead - better log output
 
 trigger:
 - master
@@ -15,4 +16,4 @@ steps:
    .\build.ps1
   displayName: 'Build and Test'
   failOnStderr: true
-  ignoreLASTEXITCODE: true #we use Write-Error instead - better log output
+  ignoreLASTEXITCODE: true 
