@@ -2,6 +2,7 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops
 
 trigger:
 - master
@@ -13,3 +14,4 @@ steps:
 - powershell: |
    .\build.ps1
   displayName: 'Build and Test'
+  failOnStderr: true
