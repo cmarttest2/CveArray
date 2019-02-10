@@ -16,6 +16,6 @@ Describe "Add-Numbers" {
 
     It "concatenates strings if given strings" {
         $sum = Add-Numbers two three
-        $sum | Should Be "two  three"
+        $sum | Should Be "twothree"
     }
 }
