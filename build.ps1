@@ -23,10 +23,10 @@ $TestResults = Invoke-Pester -Script .\tests -PassThru
 #Write-Host "$("##vso[task.setvariable variable=ErrorMessage]") $('foo')"
 Write-Host "$("##vso[task.LogIssue type=error;]") Test Pass Failed --- $($TestResults.TestResult | Where Result -EQ Failed)"
 
-<#
+
 if($TestResults.FailedCount -gt 0)
 {
-    Write-Error -Message ($testResults.TestResult | Where Result -EQ Failed)
+    Write-Error -Message "Test pass failed: `n`t$($TestResults.PassedCount) passed`n`t$($TestResults.FailedCount) failed "
     #exit 1
 }
-#>
+
