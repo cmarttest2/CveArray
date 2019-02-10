@@ -22,6 +22,6 @@ $TestResults
 
 if($TestResults.FailedCount -gt 0)
 {
-    Write-Error "Failed '$($TestResults.FailedCount)' tests, build failed"
+    throw "Failed '$($TestResults.FailedCount)' tests, build failed"
     #exit 1
 }
