@@ -16,4 +16,4 @@ steps:
    .\build.ps1
   displayName: 'Build and Test'
   failOnStderr: true
-  ignore$LASTEXITCODE: true 
+  ignoreLASTEXITCODE: true 
