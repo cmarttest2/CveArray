@@ -20,6 +20,8 @@ $TestResults = Invoke-Pester -Script .\tests -PassThru
 
 $TestResults
 
+Write-Host "$("##vso[task.setvariable variable=ErrorMessage]") $('foo')"
+
 if($TestResults.FailedCount -gt 0)
 {
     Write-Error -Message ($testResults.TestResult | Where Result -EQ Failed)
