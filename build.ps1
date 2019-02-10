@@ -16,7 +16,7 @@ function Add-Numbers($a, $b) {
     return $a + $b
 }
 
-$TestResults = Invoke-Pester -Path .\tests -PassThru
+$TestResults = Invoke-Pester -Script .\tests -PassThru
 
 $TestResults
 
