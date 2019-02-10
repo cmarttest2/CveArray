@@ -8,12 +8,15 @@ if (-not (Get-Module -Name Pester -ListAvailable))
     Install-Module -Name Pester -Scope CurrentUser -Force -Confirm:$false
 }
 
+### Find out what version of Pester we have
+Get-Module Pester
+
 function Add-Numbers($a, $b) {
     
     return $a + $b
 }
 
-$TestResults = Invoke-Pester -Path .\Tests -PassThru
+$TestResults = Invoke-Pester -Path .\tests -PassThru
 
 $TestResults
 
