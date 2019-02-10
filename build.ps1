@@ -9,7 +9,7 @@ if (-not (Get-Module -Name Pester -ListAvailable))
 }
 
 ### Find out what version of Pester we have
-Get-Module Pester
+Get-Module Pester -ListAvailable
 
 function Add-Numbers($a, $b) {
     
