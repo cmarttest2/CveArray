@@ -15,3 +15,4 @@ steps:
    .\build.ps1
   displayName: 'Build and Test'
   failOnStderr: true
+  ignoreLASTEXITCODE: true #we use Write-Error instead - better log output
