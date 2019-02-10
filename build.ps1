@@ -15,6 +15,8 @@ function Add-Numbers($a, $b) {
 
 $TestResults = Invoke-Pester -Path .\Tests -PassThru
 
+$TestResults
+
 if($TestResults.FailedCount -gt 0)
 {
     Write-Error "Failed '$($TestResults.FailedCount)' tests, build failed"
