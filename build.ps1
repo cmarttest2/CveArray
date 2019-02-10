@@ -18,8 +18,8 @@ function Add-Numbers($a, $b) {
 
 $TestResults = Invoke-Pester -Script .\tests -PassThru
 
-$TestResults
-
+#$TestResults
+Write-Host "$("##vso[task.LogIssue type=error;]") $("the task.LogIssue Azure Pipelines logging command reported that") $('foo')"
 Write-Host "$("##vso[task.setvariable variable=ErrorMessage]") $('foo')"
 
 if($TestResults.FailedCount -gt 0)
