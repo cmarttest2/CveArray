@@ -19,11 +19,14 @@ function Add-Numbers($a, $b) {
 $TestResults = Invoke-Pester -Script .\tests -PassThru
 
 #$TestResults
-Write-Host "$("##vso[task.LogIssue type=error;]") $("the task.LogIssue Azure Pipelines logging command reported that") $('foo')"
-Write-Host "$("##vso[task.setvariable variable=ErrorMessage]") $('foo')"
+#Write-Host "$("##vso[task.LogIssue type=error;]") $("the task.LogIssue Azure Pipelines logging command reported that") $('foo')"
+#Write-Host "$("##vso[task.setvariable variable=ErrorMessage]") $('foo')"
+$testResults.TestResult | Where Result -EQ Failed
 
+<#
 if($TestResults.FailedCount -gt 0)
 {
     Write-Error -Message ($testResults.TestResult | Where Result -EQ Failed)
     #exit 1
 }
+#>
