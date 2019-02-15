@@ -10,7 +10,7 @@ if (-not (Get-Module -Name Pester -ListAvailable))
 
 ### Find out what version of Pester we have
 Get-Module Pester -ListAvailable
-
+<#
 function Add-Numbers($a, $b) {
     
     return $a + $b
@@ -29,4 +29,4 @@ if($TestResults.FailedCount -gt 0)
     Write-Error -Message "Test pass failed: `n`t$($TestResults.PassedCount) passed`n`t$($TestResults.FailedCount) failed "
     #exit 1
 }
-
+#>
