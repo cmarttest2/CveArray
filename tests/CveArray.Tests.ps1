@@ -1,3 +1,10 @@
+
+
+function Add-Numbers($a, $b) {
+    
+    return $a + $b
+}
+
 Describe "Add-Numbers" {
     It "adds positive numbers" {
         $sum = Add-Numbers 2 3
