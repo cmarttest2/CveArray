@@ -14,6 +14,13 @@ pool:
 steps:
 - powershell: |
    .\build.ps1
-  displayName: 'Build and Test'
+  displayName: 'Build'
   failOnStderr: true
   ignoreLASTEXITCODE: true 
+- powershell: |
+   Invoke-Pester -Script .\tests -OutputFile $(System.DefaultWorkingDirectory)\tests.testresults.xml" -OutputFormat NUnitXML
+  displayName: 'Test'
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit' # Options: JUnit, NUnit, VSTest, xUnit
+    testResultsFiles: '*testresults.xml'    
