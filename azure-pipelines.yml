@@ -18,7 +18,7 @@ steps:
   failOnStderr: true
   ignoreLASTEXITCODE: true 
 - powershell: |
-   Invoke-Pester -Script .\tests -OutputFile $(System.DefaultWorkingDirectory)\tests.testresults.xml -OutputFormat NUnitXML
+   Invoke-Pester -Script .\tests -OutputFile tests.testresults.xml -OutputFormat NUnitXML
   displayName: 'Test'
 - task: PublishTestResults@2
   inputs:
